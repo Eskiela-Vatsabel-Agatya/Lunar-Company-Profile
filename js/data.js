@@ -34,7 +34,7 @@ const products = [
     ],
     addOns: [
       { name: 'Tali', priceText: '+Rp 400' },
-      { name: 'Label Kulit', priceText: '+Rp 500' },
+      { name: 'Label Kulit', priceText: '+Rp 500', image: 'assets/products/addon-label-kulit.jpg' },
       { name: 'Kemas Mika + Pita', priceText: '+Rp 2500' },
     ],
   },

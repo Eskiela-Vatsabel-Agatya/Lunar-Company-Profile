@@ -10,7 +10,6 @@
         '<div class="photo">' +
           '<img src="' + variant.img + '" alt="' + product.name + '" loading="lazy">' +
           (product.hasAR ? '<span class="ar-badge">Lihat dalam AR</span>' : '') +
-          '<span class="best-badge">Best Seller</span>' +
         '</div>' +
         '<div class="info">' +
           '<p class="cat">' + product.category + '</p>' +

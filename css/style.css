@@ -378,16 +378,24 @@ h1, h2, h3, h4 { margin: 0; font-family: 'Plus Jakarta Sans', Arial, sans-serif;
 
 /* ===================== Smooth 3D card treatment ===================== */
 .pain-card, .service-card, .contact-card, .logo-card, .compare-card.trad,
-.p-card, .no-app-badge, .teaser-pill, .option-pill, .mode-btn, .addon-pill, .tier-option, .tier .tier, .tiers .tier {
-  border: 1px solid rgba(11,18,32,.04) !important;
+.p-card, .no-app-badge, .teaser-pill, .tiers .tier {
+  border: 1px solid rgba(11,18,32,.04);
   box-shadow: 0 14px 30px rgba(11,18,32,.07), 0 2px 8px rgba(11,18,32,.05);
 }
-.pain-card, .service-card, .contact-card, .compare-card.trad, .p-card, .tiers .tier { border-radius: 20px !important; }
-.logo-card { border-radius: 18px !important; box-shadow: 0 10px 22px rgba(11,18,32,.06), 0 2px 6px rgba(11,18,32,.04); }
+.pain-card, .service-card, .contact-card, .compare-card.trad, .p-card, .tiers .tier { border-radius: 20px; }
+.logo-card { border-radius: 18px; box-shadow: 0 10px 22px rgba(11,18,32,.06), 0 2px 6px rgba(11,18,32,.04); }
 .pain-card, .service-card, .contact-card { transition: transform .25s ease, box-shadow .25s ease; }
 .pain-card:hover, .service-card:hover, .contact-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 20px 40px rgba(11,18,32,.1), 0 4px 10px rgba(11,18,32,.06);
+}
+.option-pill, .mode-btn, .addon-pill, .tier-option {
+  box-shadow: 0 6px 16px rgba(11,18,32,.05);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
+.option-pill:hover, .mode-btn:hover, .addon-pill:hover, .tier-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(11,18,32,.09);
 }
 
 /* ===================== Full-bleed hero with background photo ===================== */
@@ -412,3 +420,22 @@ h1, h2, h3, h4 { margin: 0; font-family: 'Plus Jakarta Sans', Arial, sans-serif;
 .footer-map { padding: 34px 0; border-bottom: 1px solid var(--line-dark) }
 .footer-map .map-frame { margin: 0; border-radius: 16px; border: 1px solid rgba(255,255,255,.14); overflow: hidden }
 .footer-map .map-frame iframe { height: 220px; filter: grayscale(.15) invert(.92) contrast(.9); }
+
+/* ===================== FAQ accordion ===================== */
+.faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; max-width: 760px }
+.faq-item {
+  background: #fff; border: 1px solid rgba(11,18,32,.04); border-radius: 16px; padding: 4px 22px;
+  box-shadow: 0 10px 24px rgba(11,18,32,.05); transition: box-shadow .2s ease;
+}
+.faq-item[open] { box-shadow: 0 16px 32px rgba(11,18,32,.08) }
+.faq-item summary {
+  list-style: none; cursor: pointer; padding: 18px 0; display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; font-weight: 700; font-size: 15px; color: var(--navy);
+}
+.faq-item summary::-webkit-details-marker { display: none }
+.faq-icon {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--bg-light); color: var(--blue);
+  display: grid; place-items: center; font-size: 16px; font-weight: 700; transition: transform .2s ease, background .2s ease;
+}
+.faq-item[open] .faq-icon { background: var(--blue); color: #fff; transform: rotate(45deg) }
+.faq-item p { margin: 0 0 20px; font-size: 13.5px; line-height: 1.65; color: var(--muted) }
