@@ -68,7 +68,7 @@ section { position: relative }
 
 /* ===================== Section scaffolding ===================== */
 .eyebrow-line { display: flex; align-items: center; gap: 10px; margin: 0 0 16px }
-.eyebrow-line .dash { width: 30px; height: 2px; background: var(--blue) }
+.eyebrow-line .dash { display: none }
 .eyebrow-line span { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--blue) }
 .section-light { padding: 100px 0; background: var(--bg-light) }
 .section-white { padding: 100px 0; background: #fff }
@@ -96,10 +96,13 @@ h1, h2, h3, h4 { margin: 0; font-family: 'Plus Jakarta Sans', Arial, sans-serif;
 .hero-copy .h-xl { margin-top: 6px }
 .hero-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 34px }
 .chip {
-  display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px;
-  background: #fff; border: 1px solid var(--line); font-size: 12.5px; font-weight: 600; color: var(--navy);
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 999px;
+  background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.32);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  font-size: 12.5px; font-weight: 600; color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.25);
 }
-.chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue) }
+.chip .dot { display: none }
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap }
 .hero-visual {
   position: relative; border-radius: 28px; overflow: hidden; aspect-ratio: 4/5;
@@ -151,10 +154,15 @@ h1, h2, h3, h4 { margin: 0; font-family: 'Plus Jakarta Sans', Arial, sans-serif;
 .pain-card p { margin: 0; font-size: 13.5px; line-height: 1.65; color: var(--muted) }
 
 .quote-callout {
-  background: linear-gradient(135deg, rgba(42,87,255,.08), rgba(42,87,255,.03));
-  border-left: 3px solid var(--blue); border-radius: 4px 18px 18px 4px; padding: 30px 34px; max-width: 640px;
+  background: linear-gradient(135deg, rgba(42,87,255,.07), rgba(42,87,255,.015));
+  border-radius: 22px; padding: 42px 40px 34px; max-width: 640px; position: relative;
+  box-shadow: 0 14px 32px rgba(11,18,32,.06);
 }
-.quote-callout p { margin: 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--navy) }
+.quote-callout::before {
+  content: '\201C'; position: absolute; top: 2px; left: 26px; font-family: Georgia, 'Times New Roman', serif;
+  font-size: 72px; line-height: 1; color: rgba(42,87,255,.22); font-weight: 700;
+}
+.quote-callout p { position: relative; margin: 0; padding-left: 8px; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--navy) }
 
 /* ===================== Feature list (3 items) ===================== */
 .feature-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 44px }
@@ -367,3 +375,40 @@ h1, h2, h3, h4 { margin: 0; font-family: 'Plus Jakarta Sans', Arial, sans-serif;
 .map-frame { margin-top: 30px; border-radius: 20px; overflow: hidden; border: 1px solid var(--line) }
 .map-frame iframe { display: block; width: 100%; height: 340px; border: 0 }
 @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr } }
+
+/* ===================== Smooth 3D card treatment ===================== */
+.pain-card, .service-card, .contact-card, .logo-card, .compare-card.trad,
+.p-card, .no-app-badge, .teaser-pill, .option-pill, .mode-btn, .addon-pill, .tier-option, .tier .tier, .tiers .tier {
+  border: 1px solid rgba(11,18,32,.04) !important;
+  box-shadow: 0 14px 30px rgba(11,18,32,.07), 0 2px 8px rgba(11,18,32,.05);
+}
+.pain-card, .service-card, .contact-card, .compare-card.trad, .p-card, .tiers .tier { border-radius: 20px !important; }
+.logo-card { border-radius: 18px !important; box-shadow: 0 10px 22px rgba(11,18,32,.06), 0 2px 6px rgba(11,18,32,.04); }
+.pain-card, .service-card, .contact-card { transition: transform .25s ease, box-shadow .25s ease; }
+.pain-card:hover, .service-card:hover, .contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(11,18,32,.1), 0 4px 10px rgba(11,18,32,.06);
+}
+
+/* ===================== Full-bleed hero with background photo ===================== */
+.hero-full { position: relative; min-height: 640px; display: flex; align-items: center; overflow: hidden; padding: 130px 0 100px }
+.hero-full-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 68% center; z-index: 0 }
+.hero-full-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(100deg, rgba(6,10,20,.95) 0%, rgba(6,10,20,.82) 32%, rgba(6,10,20,.42) 58%, rgba(6,10,20,.08) 82%);
+}
+.hero-full-inner { position: relative; z-index: 2 }
+.hero-full .hero-copy { max-width: 600px }
+.hero-full .eyebrow-line span { color: #9DB8FF }
+.hero-full .h-xl { color: #fff }
+.hero-full .lead { color: rgba(255,255,255,.86); max-width: 540px }
+@media (max-width: 900px) {
+  .hero-full { min-height: 560px; padding: 100px 0 70px }
+  .hero-full-bg { object-position: 78% center }
+  .hero-full-overlay { background: linear-gradient(180deg, rgba(6,10,20,.6) 0%, rgba(6,10,20,.88) 55%, rgba(6,10,20,.96) 100%); }
+}
+
+/* ===================== Footer map ===================== */
+.footer-map { padding: 34px 0; border-bottom: 1px solid var(--line-dark) }
+.footer-map .map-frame { margin: 0; border-radius: 16px; border: 1px solid rgba(255,255,255,.14); overflow: hidden }
+.footer-map .map-frame iframe { height: 220px; filter: grayscale(.15) invert(.92) contrast(.9); }
