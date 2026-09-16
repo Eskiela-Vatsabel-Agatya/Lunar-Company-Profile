@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio | LunAR</title>
+<meta name="description" content="LunAR, agensi teknologi kreatif Indonesia yang mengubah produk fisik menjadi pengalaman WebAR interaktif.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header class="header">
+  <nav class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="brand-word">lun<b>AR</b></span>
+      <span class="brand-tag">see it. place it. love it.</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="tentang.html">Tentang Kami</a></li>
+      <li><a href="layanan.html">Layanan</a></li>
+      <li><a href="portofolio.html" class="active">Portofolio</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="nav-phone" href="https://wa.me/6288216564572" target="_blank" rel="noopener">+62 882-1656-4572</a>
+      <a class="btn btn-primary" href="https://wa.me/6288216564572" target="_blank" rel="noopener">Hubungi Kami</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<section class="section-light" style="padding-top:60px">
+  <div class="wrap">
+    <div class="eyebrow-line"><span class="dash"></span><span>Portofolio</span></div>
+    <h1 class="h-xl">Contoh Produk<br>yang Kami <span class="accent">Buat.</span></h1>
+    <p class="lead" style="margin-top:18px;max-width:640px">Sembilan produk berikut adalah studi kasus nyata yang LunAR bangun untuk klien kami, Grizelle Souvenir, bukan sekadar demo template. Tujuh di antaranya sudah punya model 3D dan bisa dilihat langsung dalam AR lewat ponsel Anda, tandai badge "Lihat dalam AR" pada kartu produk.</p>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="wrap">
+    <div class="grid" id="portfolioGrid"></div>
+  </div>
+</section>
+
+<section class="cta-wrap">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Punya Produk yang Cocok Divisualisasikan dalam AR?</h2>
+      <p>Ceritakan produk Anda dan kami bantu memikirkan pengalaman AR yang paling pas untuknya.</p>
+      <a class="btn btn-primary btn-large" href="https://wa.me/6288216564572" target="_blank" rel="noopener">Diskusikan Proyek Anda</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <span class="brand-word">lun<b style="color:#2A57FF">AR</b></span>
+      <p>Agensi teknologi kreatif yang mengubah produk fisik menjadi pengalaman digital interaktif lewat Augmented Reality, visualisasi 3D, dan WebAR.</p>
+    </div>
+    <div>
+      <h5>Navigasi</h5>
+      <ul class="footer-list">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="portofolio.html">Portofolio</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Kontak</h5>
+      <ul class="footer-list">
+        <li><a href="https://wa.me/6288216564572" target="_blank" rel="noopener">WhatsApp: +62 882-1656-4572</a></li>
+        <li><a href="mailto:lunarcreativa@gmail.com">lunarcreativa@gmail.com</a></li>
+        <li><span>Kentingan, Jl. Ir. Sutami No.36A, Jebres, Surakarta, Jawa Tengah 57126</span></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Ikuti Kami</h5>
+      <ul class="footer-list">
+        <li><a href="https://www.instagram.com/lunar_creativa/" target="_blank" rel="noopener">Instagram @lunar_creativa</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 LunAR. Made with love in Surakarta.</span>
+    <span>lunar.id</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+
+<script src="js/data.js"></script>
+<script src="js/portfolio.js"></script>
+<script>window.LUNAR_DETAIL_PATH='portofolio/detail.html'; renderPortfolioGrid('portfolioGrid');</script>
+</body></html>
