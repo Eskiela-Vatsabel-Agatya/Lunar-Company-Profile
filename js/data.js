@@ -97,7 +97,7 @@ const products = [
     moq: 'Hubungi kami',
     material: 'Kaca',
     dimensions: '',
-    media: { modelGlb: R2('D001.glb'), modelUsdz: R2('D001.usdz'), videoId: null },
+    media: { modelGlb: R2('D001-optimized.glb'), modelUsdz: R2('D001-reduced.usdz'), videoId: null },
     variants: [
       { name: 'Produk', price: 8400, img: 'assets/products/gelas-coffee-belt.jpg', tiers: [
         { qty: 50, price: 10500 },
@@ -131,47 +131,7 @@ const products = [
     ],
     addOns: [],
   },
-  {
-    id: 'J001',
-    name: 'Classic Ceramic Bowl',
-    category: 'Mangkok',
-    bestSeller: true,
-    hasAR: false,
-    description: 'Mangkok keramik klasik. Produk ini belum memiliki model 3D, jadi tampil sebagai contoh nyata bagaimana katalog LunAR tetap rapi meski AR belum tersedia untuk satu item.',
-    moq: 'Hubungi kami',
-    material: 'Keramik',
-    dimensions: '',
-    media: { modelGlb: '', modelUsdz: '', videoId: null },
-    variants: [
-      { name: 'Produk', price: 24000, img: 'assets/products/classic-ceramic-bowl.jpg', tiers: [
-        { qty: 25, price: 27000 },
-        { qty: 100, price: 24500 },
-        { qty: 500, price: 24000 },
-      ]},
-    ],
-    addOns: [],
-  },
-  {
-    id: 'J003',
-    name: 'Mangkok Two Tone',
-    category: 'Mangkok',
-    bestSeller: true,
-    hasAR: false,
-    description: 'Mangkok keramik dua warna dengan opsi decal custom. Contoh lain dari graceful fallback ke mode foto saat model 3D belum tersedia.',
-    moq: 'Hubungi kami',
-    material: 'Keramik',
-    dimensions: '14.5 x 6.5 cm',
-    media: { modelGlb: '', modelUsdz: '', videoId: null },
-    variants: [
-      { name: 'Produk', price: 10000, img: 'assets/products/mangkok-two-tone.jpg', tiers: [
-        { qty: 50, price: 13000 },
-        { qty: 200, price: 11500 },
-        { qty: 500, price: 10800 },
-        { qty: 1000, price: 10000 },
-      ]},
-    ],
-    addOns: [],
-  },
+
   {
     id: 'T001',
     name: 'Totebag Blacu Kanvas Lipat',
