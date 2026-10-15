@@ -34,7 +34,7 @@ const products = [
     ],
     addOns: [
       { name: 'Tali', priceText: '+Rp 400' },
-      { name: 'Label Kulit', priceText: '+Rp 500', image: 'assets/products/addon-label-kulit.jpg' },
+      { name: 'Label Kulit', priceText: '+Rp 500', image: 'assets/products/addon-label-kulit.png' },
       { name: 'Kemas Mika + Pita', priceText: '+Rp 2500' },
     ],
   },
@@ -62,25 +62,7 @@ const products = [
       { name: 'Kemas Mika + Pita', priceText: '+Rp 2500' },
     ],
   },
-  {
-    id: 'A011',
-    name: 'Pouch Kulit Prada / Miniso',
-    category: 'Pouch',
-    bestSeller: true,
-    hasAR: true,
-    description: 'Pouch kulit sintetis dengan finishing emboss dan kemasan box putih. Contoh produk dengan model 3D beresolusi tinggi untuk pratinjau AR.',
-    moq: 'Hubungi kami',
-    material: 'Prada, kulit',
-    dimensions: '13 x 18 x 3 cm',
-    media: { modelGlb: R2('A002.glb'), modelUsdz: R2('A002.usdz'), videoId: null },
-    variants: [
-      { name: 'Produk', price: 5700, img: 'assets/products/pouch-kulit-prada.png', tiers: [
-        { qty: 100, price: 6300 },
-        { qty: 200, price: 5700 },
-      ]},
-    ],
-    addOns: [],
-  },
+
   {
     id: 'B013',
     name: 'Tumbler Kaca Doff',
@@ -202,7 +184,7 @@ const products = [
     dimensions: '28 x 33 cm',
     media: { modelGlb: R2('F001.glb'), modelUsdz: R2('F001.usdz'), videoId: null },
     variants: [
-      { name: 'Produk', price: 8800, img: 'assets/products/totebag-blacu-kanvas.jpg', tiers: [
+      { name: 'Produk', price: 8800, img: 'assets/products/totebag-blacu-kanvas-lipat.jpg', tiers: [
         { qty: 25, price: 11000 },
         { qty: 100, price: 8800 },
       ]},

@@ -270,7 +270,7 @@
     var lines = ['Halo LunAR, saya tertarik dengan pengalaman AR seperti ' + product.name + '.'];
     lines.push('Bisakah tim LunAR membantu membuat WebAR serupa untuk produk saya?');
     if (tier) {
-      lines.push('Referensi skala: ' + tier.qty + ' pcs pada studi kasus ini.');
+      lines.push('Referensi skala: ' + tier.qty + ' pcs pada produk ini.');
     }
     if (selectedAddOns.length) lines.push('Fitur yang saya suka: ' + selectedAddOns.join(', '));
 
