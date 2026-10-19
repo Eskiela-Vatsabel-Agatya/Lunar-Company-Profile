@@ -38,6 +38,28 @@ const products = [
       { name: 'Kemas Mika + Pita', priceText: '+Rp 2500' },
     ],
   },
+
+{
+    id: 'K001',
+    name: 'Kursi Gitar',
+    category: 'Furniture',
+    bestSeller: true,
+    hasAR: true,
+    description: 'Kursi minimalis kekinian',
+    moq: 'Hubungi kami',
+    material: 'Miniso',
+    dimensions: '',
+    media: { modelGlb: R2('guitar_chair_4.glb'), modelUsdz: R2('guitar chair 4.usdz'), videoId: null },
+    variants: [
+      { name: 'Produk', price: 2000000, img: '', tiers: [
+        { qty: 1, price: 2000000 },
+
+      ]},
+    ],
+    addOns: [],
+  },
+
+
   {
     id: 'A010',
     name: 'Pouch Prada Metalik',
